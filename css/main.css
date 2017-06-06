@@ -1,11 +1,22 @@
-.movie-thumb{
-    width: 200px;
-    height: 300px;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-.movie{
-    float: left;
-    margin: 5px;
+
+.movie-thumb {
+  width: 200px;
+  height: 300px;
 }
-.movieContainer{
-    clear: both;
+
+.movie {
+  display: block;
+  float: left;
+  margin: 5px;
+  text-decoration: none;
+  color: gray;
+}
+
+.movieContainer {
+  clear: both;
 }

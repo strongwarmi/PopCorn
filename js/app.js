@@ -1,19 +1,30 @@
 'use strict';
-const render = (root) =>{
-  root.empty();
-    const wrapper = $('<div class="wrapper></div>');
+
+const render = (root) => {
+    root.empty();
+    const wrapper = $('<div class="wrapper"></div>');
     // Append components
     wrapper.append(Header());
-    wrapper.append(MovieGrid());
-    root.append(wrapper);
-    
+
+    if (state.selectedMovie == null) {
+        wrapper.append(MovieGrid( _ => {
+            render(root);
+        }));
+    }else{
+        wrapper.append(MovieDetails( _ => {
+            render(root);
+        }));
+    }
+    //wrapper.append(MovieGrid());
+    root.append(wrapper);    
 };
+
 const state = {
     movies: movies,
-    selectedMovie:null
+    selectedMovie: null
 }
 
-$( _ =>{
+$( _ => {
     const root = $('.root');
     render(root);
 });
