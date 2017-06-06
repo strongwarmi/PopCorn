@@ -1,0 +1,11 @@
+.movie-thumb{
+    width: 200px;
+    height: 300px;
+}
+.movie{
+    float: left;
+    margin: 5px;
+}
+.movieContainer{
+    clear: both;
+}
